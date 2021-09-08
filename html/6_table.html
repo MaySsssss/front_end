@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格学习</title>
+</head>
+<body>
+
+  <!-- 表格table
+    行(row):     tr
+    列(column):  td
+    必须是先tr，再td。可以只有tr，不能只有td
+    th: table header
+    tr: table row
+    td: table data
+  -->
+  <!--
+    border: 宽度
+    title: 悬浮文字
+    colspan: 跨列
+    rowspan: 跨行
+  -->
+  <table border="20px" align="center" width="300" height="200">
+    <th colspan="3">Detail</th>
+
+    <tr>
+      <td>Name</td>
+      <td>Age</td>
+      <td>Gender</td>
+    </tr>
+    <tr>
+      <td>Henry</td>
+      <td>29</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <td>Jenny</td>
+      <td>36</td>
+      <td>Male</td>
+    </tr>
+  </table>
+
+
+  <table border="10px" title="学生成绩" align="center" width="300" height="200">
+    <th colspan="3">学生成绩</th>
+    <tr>
+      <td rowspan="2">Tom</td>
+      <td>语文</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>数学</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Jerry</td>
+      <td>语文</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>数学</td>
+      <td>100</td>
+    </tr>
+  </table>
+
+</body>
+</html>
+
