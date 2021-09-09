@@ -22,7 +22,7 @@
     -->
     <form action="1_MyFirstWeb.html" method="get">
         <!-- 文本输入框：input type="text" -->
-        <p>name: <input type="text" name="username" value="admin" readonly></p>
+        <p>name: <input type="text" name="username" placeholder="Enter Username" required></p>
         <!-- 密码输入框：input type="password" -->
         <p>password: <input type= "password" name="pwd" hidden></p>
 
@@ -31,6 +31,8 @@
             value: 单选框的值
             name: 表示组
             checked: 表示当前项是否勾选
+            required: 必填
+            placeholder: 框内提示内容
         -->
         <p>gender:
             <input type="radio" value="boy" name="gender" checked /> Male
@@ -117,6 +119,11 @@
         <!--增强鼠标可用性-->
         <label for="mark">点我试试 </label>
         <input type="text" id="mark">
+
+        <!--自定义邮箱, 正则表达式 pattern -->
+        <p>自定义邮箱:
+            <input type="text" name="diyemail" pattern="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+        </p>
 
         <!--
             只读: readonly
