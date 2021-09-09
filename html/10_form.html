@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录注册</title>
+</head>
+<body>
+    <!---->
+    <h1>Register</h1>
+
+    <!-- form
+        action: 表单提交的位置，可以是网站，也可以是一个请求处理地址
+        method: 提交方式
+            get方式可以在url中看到我们提交的信息，不安全，高效
+            post方式比较安全，可以传输大文件
+        type: text, password, checkbox, radio, submit, reset, file, hidden, image, button, 默认是text
+        name: 元素的名字，抓取的名字
+        value: 元素初始值，type为radio必须指定一个值
+        size: 表单/文本框元素初始宽度
+        maxLength: 最大的字符数
+        checked: 指定按钮是否被选中
+    -->
+    <form action="1_MyFirstWeb.html" method="get">
+        <!-- 文本输入框：input type="text" -->
+        <p>name: <input type="text" name="username" value="admin" readonly></p>
+        <!-- 密码输入框：input type="password" -->
+        <p>password: <input type= "password" name="pwd" hidden></p>
+
+        <!--单选框标签
+            input type="radio"
+            value: 单选框的值
+            name: 表示组
+            checked: 表示当前项是否勾选
+        -->
+        <p>gender:
+            <input type="radio" value="boy" name="gender" checked /> Male
+            <input type="radio" value="girl" name="gender"/> Female
+        </p>
+
+        <!--多选框标签
+        -->
+        <p>Hobby:
+            <input type="checkbox" value="h1" name="hobby" disabled> h1
+            <input type="checkbox" value="h2" name="hobby"> h2
+            <input type="checkbox" value="h3" name="hobby"> h3
+            <input type="checkbox" value="h4" name="hobby"> h4
+            <input type="checkbox" value="h5" name="hobby"> h5
+            <input type="checkbox" value="h6" name="hobby"> h6
+            <input type="checkbox" value="h7" name="hobby"> h7
+        </p>
+
+        <!-- 创建按钮
+            图片按钮（image）：提交表单
+            input type="button"
+            input type="image"
+            input type="button"
+            input type="button"
+         -->
+        <p>Button:
+            <input type="button" name="btn1" value="Button"/>
+            <input type="image" src="../resource/image/Pikachu.png">
+        </p>
+
+        <!-- 下拉框，列表框
+            默认值：selected
+        -->
+        <p>Fruit:
+            <select name="list name" id="selectvalues">
+                <option value="apple" selected>apple</option>
+                <option value="banana">banana</option>
+                <option value="peach">peach</option>
+                <option value="watermelon">watermelon</option>
+            </select>
+        </p>
+
+        <!--文本域-->
+        <p>Feedback:
+            <textarea name="textarea" id="" cols="100" rows="5">text context</textarea>
+        </p>
+
+        <!--文件域-->
+        <p>
+            <input type="file" name="file" >
+            <input type="button" name="upload" value="Upload">
+        </p>
+
+        <!--邮件验证-->
+        <p>E-mail:
+            <input type="email" name="email" >
+        </p>
+
+        <!--URL验证-->
+        <p>URL:
+            <input type="url" name="url" >
+        </p>
+
+        <!--number验证-->
+        <p>Number:
+            <input type="number" name="num" max="100" min="10" step="10">
+        </p>
+
+        <!--data验证-->
+        <p>Date:
+            <input type=" -local" name="date" >
+        </p>
+
+        <!--滑块-->
+        <p>Sound
+            <input type="range" name="voice" min="0" max="100" step="2">
+        </p>
+
+        <!--搜索框-->
+        <p>Search:
+            <input type="search" name="search" id="">
+        </p>
+        
+        <!--增强鼠标可用性-->
+        <label for="mark">点我试试 </label>
+        <input type="text" id="mark">
+
+        <!--
+            只读: readonly
+            禁用: disable
+            隐藏: hidden
+        -->
+
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+
+</body>
+</html>
