@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--优先级：id > 类 > 标签-->
+    <style>
+        /*标签选择器，会选择到页面的所有的这个标签的元素*/
+        h1 {
+            color: #2b0e0e;
+            background: aquamarine;
+        }
+        p {
+            font-size: 80px;
+        }
+        /*类选择器，可以多个标签归类，可以复用*/
+        .h1_1 {
+            background: #bfb49a;
+            border-radius: 19px;
+        }
+        /*id选择器，必须保证全局唯一，多次会报错，尽管可以运行*/
+        #h1_id {
+            background: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Java</h1>
+    <p>Course 1</p>
+    <h1 class="h1_1">C/C++</h1>
+    <h1 id="h1_id">Python</h1>
+
+</body>
+</html>
