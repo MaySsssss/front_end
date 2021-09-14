@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类选择器</title>
+
+    <style>
+        /*ul的第一个子元素*/
+        ul li:first-child {
+            background: red;
+        }
+
+        /*ul的最后一个子元素*/
+        ul li:last-child {
+            background: #bfb49a;
+        }
+
+        /*选中 p1：定位到父元素，选择当前第一个元素，并且是当前元素才生效，会受到h1影响*/
+        p:nth-child(1) {
+            background: dodgerblue;
+        }
+
+        /*选中 p2：定位到父元素，选择当前第二个p元素，不受h1影响*/
+        p:nth-of-type(2) {
+            background: #937734;
+        }
+
+        a:hover {
+            background: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <!--  伪类：  -->
+    <h1>h1</h1>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <ul>
+        <li>
+            li1
+        </li>
+        <li>
+            li2
+        </li>
+        <li>
+            li3
+        </li>
+    </ul>
+    <a href="../../html/1_MyFirstWeb.html">click here</a>
+</body>
+</html>
