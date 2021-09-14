@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+
+    <style>
+        .demo a{
+            float: left;                         /*浮动*/
+            display: block;                    /*显示*/
+            height: 50px;
+            width: 50px;
+            border-radius: 20px;        /*圆角*/
+            background: blueviolet;
+            text-align: center;             /*文字居中*/
+            color: grey;                        /*文字颜色*/
+            text-decoration: none;      /*去下划线*/
+            margin-right: 5px;
+            /*line-height: 50px;*/      /*行高*/
+            font: bold 20px/50px Arial; /*粗体 字体大小/行高 family*/
+        }
+
+        /*属性名=属性值（正则）*/
+        /*存在id属性的元素  标签[带有id的属性]{}*/
+        /*a[id] {*/
+        /*    background: yellow;*/
+        /*}*/
+
+        /*选择id为first的属性的元素*/
+        /*a[id=first] {*/
+        /*    background: grey;*/
+        /*}*/
+
+        /*class中有item的元素*/
+        a[class*="item"] {
+            background: red;
+        }
+
+        /*选中href中以https开头的元素*/
+        /*a[href^=http] {*/
+        /*    background: #5c5543;*/
+        /*}*/
+
+        /*选中href中以pdf结尾的元素*/
+        a[href$=pdf] {
+            background: #40225c;
+        }
+
+        /*
+            = 是绝对等于
+            *= 是包含等于
+            ^= 以什么开头
+            $= 以什么结尾
+        */
+    </style>
+</head>
+<body>
+    <p class="demo">
+        <a href="https://www.google.com.au/" class="links item first" id="first">1</a>
+        <a href="" class="links item active" target="_blank" title="test1">2</a>
+        <a href="css/style.css" class="links item">3</a>
+        <a href="css/style.png" class="links item">4</a>
+        <a href="css/style.jpg" class="links item">5</a>
+        <a href="abc" class="links item">6</a>
+        <a href="/a.pdf" class="links item">7</a>
+        <a href="/abc.pdf" class="links item" id="last">8</a>
+        <a href="abcd.doc" class="links item last">9</a>
+    </p>
+</body>
+</html>
